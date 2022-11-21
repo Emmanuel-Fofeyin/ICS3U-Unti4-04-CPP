@@ -31,17 +31,18 @@ int main() {
         guessedNumberAsNumber = std::stoi(guessedNumberAsString);
         while (true) {
             if (guessedNumberAsNumber == randomNumber) {
-            std::cout << "You guessed correctly!" << std::endl;
-        } else if (guessedNumberAsNumber != randomNumber) {
-            std::cout << "\nYou guessed incorrectly, the number was "
-            << randomNumber << std::endl;
-            break;
+                std::cout << "You guessed correctly!" << std::endl;
+            } else if (guessedNumberAsNumber != randomNumber) {
+                std::cout << "\nYou guessed incorrectly, the number was "
+                << randomNumber << std::endl;
+                break;
+            }
         }
-    } catch (std::invalid_argument) {
+     }catch (std::invalid_argument) {
         std::cout << "\nNot good, "
         << guessedNumberAsString << " is not an integer.";
     }
     std::cout << "\nThanks for playing.";
     std::cout << "\n\nDone.";
-  }
+  
 }
