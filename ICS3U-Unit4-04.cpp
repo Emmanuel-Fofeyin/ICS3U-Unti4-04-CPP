@@ -1,6 +1,6 @@
-// Copyright (c) 2022 Emmanuel All rights reserved.
+// Copyright (c) 2022 Emmanuel Fofeyin All rights reserved.
 
-// Created by : Emmanuel
+// Created by : Emmanuel Fofeyin
 // Created on : Oct 2022
 // This program is a number guessing game
 // Using break statements.
