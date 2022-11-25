@@ -46,5 +46,5 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "Thanks for playing." << std::endl;
-    std::cout << "Done." << std::endl;
+    std::cout << "\nDone." << std::endl;
 }
