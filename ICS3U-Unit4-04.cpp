@@ -29,9 +29,7 @@ int main() {
             std::cout << std::endl;
             guessedNumberInt = std::stoi(chosenNumber);
             if (guessedNumberInt == randomNumber) {
-                std::cout << "You got the number right!";
-                std::cout << std::endl;
-                std::cout << "The number was " << randomNumber << ".";
+                std::cout << "You guessed correctly!";
                 std::cout << std::endl;
                 break;
             } else if (guessedNumberInt > randomNumber) {
@@ -47,5 +45,6 @@ int main() {
     }
 
     std::cout << std::endl;
+    std::cout << "Thanks for playing." << std::endl;
     std::cout << "Done." << std::endl;
 }
