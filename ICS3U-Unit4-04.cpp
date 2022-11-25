@@ -42,11 +42,11 @@ int main() {
             std::cout << std::endl;
         }
     } catch (std::invalid_argument) {
-        std::cout << "Not good " << guessedNumberAsNumber << "input isn't an integer.";
+        std::cout << "\nNot good " << guessedNumberAsNumber << "input isn't an integer.";
         std::cout << std::endl;
     }
 
     std::cout << std::endl;
-    std::cout << "Thanks for playing." << std::endl;
-    std::cout << "Done." << std::endl;
+    std::cout << ("Thanks for playing.") << std::endl;
+    std::cout << ("Done.") << std::endl;
 }
