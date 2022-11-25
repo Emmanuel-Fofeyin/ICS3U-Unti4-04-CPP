@@ -24,7 +24,7 @@ int main() {
         while (true) {
             std::cout << std::endl;
             std::string chosenNumber;
-            std::cout << "Enter a number from 0-9: ";
+            std::cout << "Enter a number between 0 and 9: ";
             std::cin >> chosenNumber;
             std::cout << std::endl;
             guessedNumberInt = std::stoi(chosenNumber);
