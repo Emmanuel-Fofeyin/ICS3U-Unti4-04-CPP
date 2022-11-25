@@ -10,39 +10,43 @@
 #include <string>
 
 int main() {
-    // creating variables
 
+    // creating variables
     std::string guessedNumberAsString;
     int randomNumber;
     int guessedNumberAsNumber;
 
-    // random generator
     std::random_device rseed;
-    std::mt19937 rgen(rseed());  // mersenne_twister
+    std::mt19937 rgen(rseed());
     std::uniform_int_distribution<int> idist(0, 9);
     randomNumber = idist(rgen);
-
-    // input
-    std::cout << "Enter a number between 0 and 9: ";
-    std::cin >> guessedNumberAsString;
-
-    // process and output
     try {
-        guessedNumberAsNumber = std::stoi(guessedNumberAsString);
         while (true) {
+            std::cout << std::endl;
+            std::string guessedNumberAsNumber;
+            std::cout << "Enter a number between 0 and 9: ";
+            std::cin >> guessedNumberAsNumber;
+            std::cout << std::endl;
+            guessedNumberAsNumber = std::stoi(guessedNumberAsString);
             if (guessedNumberAsNumber == randomNumber) {
-                std::cout << "You guessed correctly!" << std::endl;
-            } else if (guessedNumberAsNumber != randomNumber) {
-                std::cout << "\nYou guessed incorrectly, the number was "
-                << randomNumber << std::endl;
+                std::cout << "You guessed correctly!";
+                std::cout << std::endl;
+                std::cout << "The number was " << randomNumber << ".";
+                std::cout << std::endl;
                 break;
+            } else if (guessedNumberAsNumber > randomNumber) {
+                std::cout << guessedNumberAsNumber << " is higher than the random number.";
+            } else if (guessedNumberAsNumber < randomNumber) {
+                std::cout << guessedNumberAsNumber << " is lower than the random number.";
             }
+            std::cout << std::endl;
         }
-     }catch (std::invalid_argument) {
-        std::cout << "\nNot good, "
-        << guessedNumberAsString << " is not an integer.";
+    } catch (std::invalid_argument) {
+        std::cout << "Not good " << guessedNumberAsNumber << "input isn't an integer.";
+        std::cout << std::endl;
     }
-    std::cout << "\nThanks for playing.";
-    std::cout << "\n\nDone.";
-  
+
+    std::cout << std::endl;
+    std::cout << "Thanks for playing." << std::endl;
+    std::cout << "Done." << std::endl;
 }
